@@ -1,0 +1,405 @@
+/* ## Typographical Elements
+--------------------------------------------- */
+
+html {
+	font-size: 62.5%; /* 10px browser default */
+}
+
+body {
+	background-color: $color-border;
+	color: $color-primary;
+	font-family: $font-family-text;
+	font-size: 2rem;
+	-webkit-font-smoothing: antialiased;
+	font-weight: $font-weight-normal;
+	line-height: 1.625;
+	margin: 0;
+
+	@include breakpoint(sm) {
+		font-size: 1.8rem;
+	}
+
+	/* Chrome fix */
+	> div {
+		font-size: 2rem;
+
+		@include breakpoint(sm) {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	transition: all 0.1s ease-in-out;
+}
+
+a {
+	color: $color-link;
+	text-decoration: underline;
+
+	a:focus,
+	a:hover {
+		color: $color-primary;
+		text-decoration: none;
+	}
+}
+
+p {
+	margin: 0 0 28px;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+hr {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid $color-border;
+	clear: both;
+	margin: 1em 0;
+}
+
+b,
+strong {
+	font-weight: $font-weight-bold;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+mark {
+	background: $color-border;
+	color: $color-black;
+}
+
+blockquote {
+	margin: 40px;
+
+	&::before {
+		content: "\201C";
+		display: block;
+		font-size: 3rem;
+		height: 0;
+		left: -20px;
+		position: relative;
+		top: -10px;
+	}
+}
+
+
+/* ## Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-text;
+	font-weight: $font-weight-bolder;
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
+
+h1 {
+	font-size: 3.6rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.4rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.8rem;
+}
+
+h6 {
+	font-size: 1.6rem;
+}
+
+/* ## Objects
+--------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+/* ## Gallery
+--------------------------------------------- */
+
+.gallery {
+	overflow: hidden;
+
+	img {
+		border: 1px solid $color-border;
+		height: auto;
+		padding: 4px;
+
+		&:focus,
+		&:hover {
+			border: 1px solid #999;
+		}
+	}
+}
+
+.gallery-item {
+	float: left;
+	margin: 0 0 28px;
+	text-align: center;
+
+	.gallery-columns-1 & {
+		width: 100%;
+	}
+
+	.gallery-columns-2 & {
+		width: 50%;
+	}
+
+	.gallery-columns-3 & {
+		width: 33%;
+	}
+
+	.gallery-columns-4 & {
+		width: 25%;
+	}
+
+	.gallery-columns-5 & {
+		width: 20%;
+	}
+
+	.gallery-columns-6 & {
+		width: 16.6666%;
+	}
+
+	.gallery-columns-7 & {
+		width: 14.2857%;
+	}
+
+	.gallery-columns-8 & {
+		width: 12.5%;
+	}
+
+	.gallery-columns-9 & {
+		width: 11.1111%;
+	}
+}
+
+.gallery-columns-2 .gallery-item:nth-child(2n+1),
+.gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery-columns-9 .gallery-item:nth-child(9n+1) {
+	clear: left;
+}
+
+/* ## Forms
+--------------------------------------------- */
+
+input,
+select,
+textarea {
+	background-color: $color-white;
+	border: 1px solid $color-border;
+	color: $color-primary;
+	font-size: 1.8rem;
+	font-weight: $font-weight-normal;
+	padding: 16px;
+	width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #999;
+	outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+::-moz-placeholder {
+	color: $color-primary;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: $color-primary;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: $color-primary;
+	border: 0;
+	color: $color-white;
+	cursor: pointer;
+	font-size: 1.6rem;
+	font-weight: $font-weight-bold;
+	padding: 16px 24px;
+	text-decoration: none;
+	white-space: normal;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background-color: $color-accent;
+		color: $color-white;
+	}
+
+	&.small {
+		padding: 8px 16px;
+	}
+
+	.site-container & {
+
+		&:disabled,
+		&:disabled:hover {
+			background-color: $color-border;
+			border-width: 0;
+			color: $color-disabled;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.entry-content .button {
+	
+	&:focus,
+	&:hover {
+		color: $color-white;
+	}
+}
+
+.button {
+	display: inline-block;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}
+
+/* ## Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+	word-break: break-all;
+}
+
+tbody {
+	border-bottom: 1px solid $color-border;
+}
+
+td,
+th {
+	text-align: left;
+}
+
+td {
+	border-top: 1px solid $color-border;
+	padding: 6px;
+}
+
+th {
+	font-weight: $font-weight-normal;
+	padding: 0 6px;
+}
+
+td,
+th {
+
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+/* ## Screen Reader Text
+--------------------------------------------- */
+
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-text span {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.genesis-nav-menu .search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus {
+	background: $color-white;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	clip: auto !important;
+	color: $color-primary;
+	display: block;
+	font-size: 1em;
+	font-weight: $font-weight-bold;
+	height: auto;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.more-link {
+	position: relative;
+}

@@ -1,0 +1,49 @@
+.footer-widgets {
+	background-color: $color-white;
+	clear: both;
+	font-size: 1.8rem;
+	padding: 60px 0;
+}
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+	width: 380px;
+
+	@include breakpoint(xl) {
+		width: 340px;
+	}
+
+	@include breakpoint(lg) {
+		width: 300px;
+	}
+
+	@include breakpoint(md) {
+		width: 100%;
+	}
+}
+
+.footer-widgets-1 {
+	margin-right: 70px;
+
+	@include breakpoint(xl) {
+		margin-right: 60px;
+	}
+
+	@include breakpoint(lg) {
+		margin-right: 30px;
+	}
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+	float: left;
+
+	@include breakpoint(md) {
+		margin: 0 auto 40px;
+	}
+}
+
+.footer-widgets-3 {
+	float: right;
+}

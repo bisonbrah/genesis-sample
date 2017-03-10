@@ -1,0 +1,140 @@
+/*!
+	Theme Name: Genesis Sample
+	Theme URI: http://www.studiopress.com/
+	Description: This is the sample theme created for the Genesis Framework.
+	Author: StudioPress
+	Author URI: http://www.studiopress.com/
+	Version: 2.3.0
+	Tags: black, red, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+	Template: genesis
+	Template Version: 2.3.0
+	License: GPL-2.0+
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: genesis-sample
+*/
+
+/* # Table of Contents
+- Utilities
+	- Variables
+	- Mixins
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Screen Reader Text
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Column Classes
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+- Widgets
+	- Featured Content
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+- Skip Links
+- Site Header
+	- Title Area
+	- Widget Area
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- After Header Navigation
+	- Footer Navigation
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+- Sidebars
+- Footer Widgets
+- Site Footer
+- Print Styles
+*/
+
+/* # Utilities
+---------------------------------------------------------------------------------------------------- */
+
+@import 'utilities';
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+@import 'reset';
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+@import 'defaults';
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+@import 'structure-layout';
+
+/* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+
+@import 'common-classes';
+
+/* # Widgets
+---------------------------------------------------------------------------------------------------- */
+
+@import 'widgets';
+
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+@import 'plugins';
+
+/* # Skip Links
+---------------------------------------------------------------------------------------------------- */
+
+@import 'skip-links';
+
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+@import 'site-header';
+
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+@import 'site-navigation';
+
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+@import 'content-area';
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+@import 'sidebars';
+
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+@import 'footer-widgets';
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+@import 'site-footer';
+
+/* # Print Styles
+---------------------------------------------------------------------------------------------------- */
+
+@import 'print-styles';

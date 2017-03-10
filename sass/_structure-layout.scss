@@ -1,0 +1,220 @@
+/* ## Site Containers
+--------------------------------------------- */
+
+.site-inner,
+.wrap {
+	margin: 0 auto;
+	max-width: 1280px;
+
+	@include breakpoint(xl) {
+		max-width: 1140px;
+	}
+
+	@include breakpoint(lg) {
+		max-width: 960px;
+	}
+
+	@include breakpoint(md) {
+		max-width: 800px;
+	}
+}
+
+.site-inner {
+	clear: both;
+	padding-top: 40px;
+	word-wrap: break-word;
+
+	@include breakpoint(sm) {
+		padding: 5% 5% 0;
+	}
+}
+
+.wrap {
+
+	@include breakpoint(sm) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+.landing-page .site-inner {
+	max-width: 800px;
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-wrap {
+
+	.content-sidebar-sidebar &,
+	.sidebar-content-sidebar &,
+	.sidebar-sidebar-content & {
+		width: 1060px;
+
+		@include breakpoint(xl) {
+			width: 920px;
+		}
+
+		@include breakpoint(lg) {
+			width: 740px;
+		}
+
+		@include breakpoint(md) {
+			width: 100%;
+		}
+	}
+
+	.content-sidebar-sidebar & {
+		float: left;
+	}
+
+	.sidebar-content-sidebar &,
+	.sidebar-sidebar-content & {
+		float: right;
+	}
+}
+
+/* ### Content */
+
+.content {
+	float: right;
+	width: 880px;
+
+	@include breakpoint(xl) {
+		width: 800px;
+	}
+
+	@include breakpoint(lg) {
+		width: 620px;
+	}
+
+	@include breakpoint(md) {
+		width: 100%;
+	}
+
+	.content-sidebar &,
+	.content-sidebar-sidebar &,
+	.sidebar-content-sidebar & {
+		float: left;
+	}
+
+	.content-sidebar-sidebar &,
+	.sidebar-content-sidebar &,
+	.sidebar-sidebar-content & {
+		width: 660px;
+
+		@include breakpoint(xl) {
+			width: 580px;
+		}
+
+		@include breakpoint(lg) {
+			width: 400px;
+		}
+
+		@include breakpoint(md) {
+			width: 100%;
+		}
+	}
+
+	.full-width-content & {
+		width: 100%;
+	}
+}
+
+/* ### Primary Sidebar */
+
+.sidebar-primary {
+	float: right;
+	width: 360px;
+
+	@include breakpoint(xl) {
+		width: 300px;
+	}
+
+	@include breakpoint(md) {
+		width: 100%;
+	}
+
+	.sidebar-content &,
+	.sidebar-sidebar-content & {
+		float: left;
+	}
+}
+
+/* ### Secondary Sidebar */
+
+.sidebar-secondary {
+	float: left;
+	width: 180px;
+
+	@include breakpoint(md) {
+		width: 100%;
+	}
+
+	.content-sidebar-sidebar & {
+		float: right;
+	}
+}
+
+/* ## Column Classes
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin-left: 2.564102564102564%;
+
+	@include breakpoint(sm) {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65.81196581196582%;
+}
+
+.one-fourth {
+	width: 23.076923076923077%;
+}
+
+.three-fourths {
+	width: 74.35897435897436%;
+}
+
+.one-sixth {
+	width: 14.52991452991453%;
+}
+
+.five-sixths {
+	width: 82.90598290598291%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}

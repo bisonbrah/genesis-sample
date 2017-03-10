@@ -1,0 +1,182 @@
+/* ## Entries
+--------------------------------------------- */
+
+.entry {
+	background-color: $color-white;
+	margin-bottom: 40px;
+	padding: 70px 80px;
+
+	@include breakpoint(sm) {
+		padding: 30px;
+		margin-bottom: 5%;
+	}
+}
+
+.entry-content {
+
+	ol,
+	ul {
+		margin-bottom: 28px;
+		margin-left: 40px;
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+	ul > li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+	code {
+		background-color: $color-primary;
+		color: $color-border;
+	}
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+	font-size: 1.6rem;
+	margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 24px;
+}
+
+.entry-footer .entry-meta {
+	border-top: 1px solid $color-border;
+	padding-top: 24px;
+}
+
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+
+.pagination {
+	clear: both;
+	margin: 40px 0;
+
+	@include breakpoint(sm) {
+		margin: 5% auto;
+	}
+}
+
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+
+.archive-pagination {
+
+	li {
+		display: inline;
+	}
+
+	a {
+		background-color: $color-white;
+		color: $color-primary;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 1.6rem;
+		font-weight: $font-weight-bolder;
+		padding: 8px 12px;
+		text-decoration: none;
+
+		@include breakpoint(sm) {
+			margin-bottom: 4px;
+		}
+	}
+
+	a:focus,
+	a:hover,
+	.active a {
+		background-color: $color-accent;
+		color: $color-white;
+	}
+}
+
+/* ## Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	background-color: $color-white;
+	font-size: 1.6rem;
+	margin-bottom: 40px;
+
+	@include breakpoint(sm) {
+		padding: 30px;
+		margin-bottom: 5%;
+	}
+}
+
+.comment-respond,
+.entry-pings {
+	padding: 60px 60px 32px;
+}
+
+.entry-comments {
+	padding: 60px;
+}
+
+.comment-list {
+
+	li {
+		padding: 40px 0 0 30px;
+	}
+
+	.depth-1 {
+		padding-left: 0;
+	}
+}
+
+.comment-header {
+	margin-bottom: 30px;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.comment-content {
+	clear: both;
+	
+	ul > li {
+		list-style-type: disc;
+	}
+}
+
+.comment-respond {
+
+	input[type="email"],
+	input[type="text"],
+	input[type="url"] {
+		width: 50%;
+	}
+
+	label {
+		display: block;
+		margin-right: 12px;
+	}
+}
+
+.entry-pings .reply {
+	display: none;
+}

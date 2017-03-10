@@ -1,0 +1,42 @@
+/* ## Variables
+--------------------------------------------- */
+
+/* ### Colors */
+$color-primary: #333;
+$color-accent: #c3251d;
+$color-link: #c3251d;
+$color-border: #eee;
+$color-disabled: #777;
+$color-white: #fff;
+$color-black: #000;
+
+/* ### Font Weights */
+$font-weight-light: lighter;
+$font-weight-normal: 400;
+$font-weight-bolder: 600;
+$font-weight-bold: 700;
+
+/* ### Font Families */
+$font-family-text: 'Source Sans Pro', sans-serif;
+$font-family-display: 'Source Sans Pro', sans-serif;
+$font-family-code:  'source-code-pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+
+
+/* ## Mixins
+--------------------------------------------- */
+
+/* ### Media Queries */
+@mixin breakpoint($size) {
+
+    @if $size == xs {
+        @media (max-width: 600px)  { @content; }
+    } @else if $size == sm {
+        @media (max-width: 860px)  { @content; }
+    } @else if $size == md {
+        @media (max-width: 1023px) { @content; }
+    } @else if $size == lg {
+        @media (max-width: 1200px) { @content; }
+    } @else if $size == xl {
+        @media (max-width: 1340px) { @content; }
+    }
+}

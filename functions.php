@@ -52,6 +52,14 @@ function genesis_sample_enqueue_scripts_styles() {
 	wp_enqueue_style( 'genesis-sample-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
+	// Remove default stylesheet.
+	wp_deregister_style( 'genesis-sample-theme' );
+
+	// Add compiled stylesheet.
+	wp_register_style( 'genesis-sample-theme', get_stylesheet_directory_uri() . '/style.min.css', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'genesis-sample-theme' );
+
+	// Add responsive menu JS.
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_localize_script(
@@ -59,6 +67,9 @@ function genesis_sample_enqueue_scripts_styles() {
 		'genesis_responsive_menu',
 		genesis_sample_responsive_menu_settings()
 	);
+
+	// Add compiled JS.
+	wp_enqueue_script( 'genesis-sample-scripts', get_stylesheet_directory_uri() . '/js/script.js', array(), CHILD_THEME_VERSION, true );
 
 }
 

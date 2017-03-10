@@ -1,0 +1,281 @@
+.genesis-nav-menu {
+	clear: both;
+	font-size: 1.6rem;
+	font-weight: $font-weight-bolder;
+	line-height: 1;
+	width: 100%;
+
+	@include breakpoint(md) {
+		text-align: center;
+	}
+
+	.menu-item {
+		display: inline-block;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		text-align: left;
+
+		&:hover {
+			position: static;
+
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
+		}
+	}
+
+	li {
+
+		@include breakpoint(md) {
+			float: none;
+		}
+	}
+
+	a {
+		color: $color-primary;
+		display: block;
+		padding: 32px 20px;
+		text-decoration: none;
+	}
+
+	a:focus,
+	a:hover,
+	.current-menu-item > a,
+	.sub-menu .current-menu-item > a:focus,
+	.sub-menu .current-menu-item > a:hover  {
+		color: $color-link;
+		text-decoration: underline;
+	}
+
+	.sub-menu {
+		border-top: 1px solid $color-border;
+		left: -9999px;
+		opacity: 0;
+		position: absolute;
+		transition: opacity .4s ease-in-out;
+		width: 200px;
+		z-index: 99;
+
+		@include breakpoint(md) {
+			width: 100%;
+		}
+
+		a {
+			background-color: $color-white;
+			border: 1px solid $color-border;
+			border-top: 0;
+			font-size: 1.4rem;
+			padding: 20px;
+			position: relative;
+			width: 200px;
+			word-wrap: break-word;
+
+			@include breakpoint(md) {
+				width: 100%;
+			}
+		}
+
+		.sub-menu {
+			margin: -56px 0 0 199px;
+		}
+	}
+
+	> .first > a {
+		padding-left: 0;
+	}
+
+	> .last > a {
+		padding-right: 0;
+	}
+
+	> .right {
+		float: right;
+	}
+}
+
+/* ## Accessible Menu
+--------------------------------------------- */
+
+.menu .menu-item {
+
+	&:focus {
+		position: static;
+	}
+
+	> a:focus + ul.sub-menu,
+	&.sfHover > ul.sub-menu {
+		left: auto;
+		opacity: 1;
+	}
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+	display: none;
+	visibility: hidden;
+
+	@include breakpoint(md) {
+		background-color: $color-white;
+		border-width: 0;
+		color: $color-primary;
+		display: block;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		visibility: visible;
+		
+		&:hover,
+		&:focus {
+			background-color: $color-white;
+			border-width: 0;
+			color:$color-link;
+		}
+	}
+}
+
+.menu-toggle {
+
+	@include breakpoint(md) {
+		line-height: 22px;
+		position: relative;
+		width: 100%;
+		z-index: 1000;
+
+		&,
+		&:focus,
+		&:hover {
+			border-top: 1px solid $color-border;
+		}
+
+		&::before {
+			font-size: 1.5em;
+			margin-right: 10px;
+			text-rendering: auto;
+		}
+	}
+}
+
+.sub-menu-toggle {
+
+	@include breakpoint(md) {
+		float: right;
+		padding: 13px 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100;
+
+		.sub-menu & {
+			padding: 12px 10px;
+		}
+
+		&::before {
+			display: inline-block;
+			text-rendering: auto;
+			transform: rotate( 0 );
+			transition: transform .25s ease-in-out;
+		}
+
+		&.activated::before {
+			transform: rotate( 180deg );
+		}
+	}
+}
+
+/* ### Genesis Responsive Menus */
+
+.genesis-responsive-menu {
+
+	@include breakpoint(md) {
+		display: none;
+		position: relative;
+
+		.wrap {
+			padding: 0;
+		}
+
+		.genesis-nav-menu {
+
+			.menu-item {
+				display: block;
+				float: none;
+				position: relative;
+				text-align: left;
+
+				&:focus,
+				&:hover {
+					position: relative;
+				}
+
+				a {
+					border: none;
+					margin-bottom: 1px;
+					padding: 15px 20px;
+					width: 100%;
+				}
+
+				> a:focus ul.sub-menu,
+				> a:focus ul.sub-menu .sub-menu {
+					left: 0;
+					margin-left: 0;
+				}
+			}
+
+			> .menu-item-has-children > a::after {
+				content: none;
+			}
+
+			.sub-menu {
+				border: none;
+				clear: both;
+				display: none;
+				margin: 0;
+				opacity: 1;
+				padding-left: 15px;
+				position: static;
+				width: 100%;
+
+				.sub-menu {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+/* ## Site Header Navigation
+--------------------------------------------- */
+
+.site-header {
+
+	.genesis-nav-menu li li {
+		margin-left: 0;
+	}
+
+	ul.genesis-nav-menu {
+
+		@include breakpoint(md) {
+			float: none;
+		}
+	}
+}
+
+/* ## After Header Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	background-color: $color-white;
+	border-top: 1px solid $color-border;
+}
+
+/* ## Footer Navigation
+--------------------------------------------- */
+
+.site-footer .genesis-nav-menu {
+	padding-bottom: 20px;
+
+	a {
+		padding: 0 20px 10px;
+	}
+}
